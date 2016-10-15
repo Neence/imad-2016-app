@@ -4,8 +4,8 @@ var path = require('path');
 
 var app = express();
 
-//var articles={
-    articleOne={
+var articles={
+    'article-One':{
     title:'Article-One',
     heading:'Article-One',
     date:'10-OCT-2016',
@@ -21,16 +21,16 @@ var app = express();
                    This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This
                 is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
                </p>`    
-    };
-    /*'article-two':{
+    },
+    'article-two':{
     title:'Article-Two',
     heading:'Article-Two',
     date:'15-OCT-2016',
     content:`<p> 
                 This is my second article.
                </p>`  
-    }*/
-//};
+    }
+};
 
 function createTemplate(data){
 var title=data.title;
@@ -76,16 +76,16 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-//app.get('/article-one', function (req, res) {
-  //res.send(createTemplate(articleOne));
-//});
+app.get('/article-one', function (req, res) {
+  res.send(createTemplate(articles[articleOne]));
+);
 
-app.get('/:articleName', function (req, res) {
-    articleName=req.params.articleName;
-    console.log(`${articleName}`);
+//app.get('/:articleName', function (req, res) {
+//    articleName=req.params.articleName;
+//    console.log(`${articleName}`);
       //res.send(createTemplate(articles[articleName]));
      // res.send(createTemplate(articleName));
-});
+//});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
