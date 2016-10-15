@@ -4,7 +4,8 @@ var path = require('path');
 
 var app = express();
 
-var articleOne={
+var articles={
+    articleOne:{
     title:'Article-One',
     heading:'Article-One',
     date:'10-OCT-2016',
@@ -20,8 +21,15 @@ var articleOne={
                    This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This
                 is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
                </p>`    
-    
-    
+    },
+    articleTwo:{
+    title:'Article-Two',
+    heading:'Article-Two',
+    date:'15-OCT-2016',
+    content:`<p> 
+                This is my second article.
+               </p>`  
+    }
 };
 
 function createTemplate(data){
