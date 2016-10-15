@@ -4,8 +4,8 @@ var path = require('path');
 
 var app = express();
 
-var articles={
-    'article-One':{
+//var articles={
+    articleOne={
     title:'Article-One',
     heading:'Article-One',
     date:'10-OCT-2016',
@@ -21,16 +21,16 @@ var articles={
                    This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This
                 is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
                </p>`    
-    },
-    'article-two':{
+    };
+    /*'article-two':{
     title:'Article-Two',
     heading:'Article-Two',
     date:'15-OCT-2016',
     content:`<p> 
                 This is my second article.
                </p>`  
-    }
-};
+    }*/
+//};
 
 function createTemplate(data){
 var title=data.title;
@@ -82,9 +82,9 @@ app.get('/', function (req, res) {
 
 app.get('/:articleName', function (req, res) {
     articleName=req.params.articleName;
-    console.log(${articleName});
+    //console.log(${articleName});
       //res.send(createTemplate(articles[articleName]));
-      res.send(createTemplate(articles[articleName]));
+      res.send(createTemplate(articleone));
 });
 
 app.get('/ui/style.css', function (req, res) {
