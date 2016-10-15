@@ -22,14 +22,14 @@ var app = express();
                 is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
                </p>`    
     };
-    'article-two':{
+    articleTwo={
     title:'Article-Two',
     heading:'Article-Two',
     date:'15-OCT-2016',
     content:`<p> 
                 This is my second article.
                </p>`  
-    }
+    };
 //};
 
 function createTemplate(data){
