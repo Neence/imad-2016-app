@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 
 //var articles={
-    articleone={
+    articleOne={
     title:'Article-One',
     heading:'Article-One',
     date:'10-OCT-2016',
