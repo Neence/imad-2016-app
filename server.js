@@ -77,7 +77,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articles[article-One]));
+  res.send(createTemplate(articles[`article-One`]));
 });
 
 //app.get('/:articleName', function (req, res) {
